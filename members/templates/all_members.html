@@ -11,9 +11,18 @@
 
   <h1>Members</h1>
   
+  <h2>Teenage Members (Under 20)</h2>
   <ul>
-    {% for x in mymembers %}
-      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% for member in teenage_members %}
+      <li><a href="details/{{ member.id }}">{{ member.firstname }} {{ member.lastname }}</a></li>
     {% endfor %}
   </ul>
+  
+  <h2>Adult Members (20 and Over)</h2>
+  <ul>
+    {% for member in adult_members %}
+      <li><a href="details/{{ member.id }}">{{ member.firstname }} {{ member.lastname }}</a></li>
+    {% endfor %}
+  </ul>
+  
 {% endblock %}
